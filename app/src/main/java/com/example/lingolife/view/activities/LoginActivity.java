@@ -1,5 +1,6 @@
 package com.example.lingolife.view.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,13 +21,14 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnBack; // Declaração do botão de voltar
     private SessionManager sessionManager;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         // Inicialização dos componentes de entrada
-        edtUsername = findViewById(R.id.edtUsername);
+        edtUsername = findViewById(R.id.edtNome);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnBack = findViewById(R.id.btnBack); // Inicializa o botão de voltar

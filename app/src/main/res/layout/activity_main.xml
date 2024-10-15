@@ -12,11 +12,6 @@
         android:background="@color/azulsite"
         android:padding="16dp">
 
-        <!-- Logo ImageView -->
-
-        <!-- Alterado para abaixo da logo -->
-
-        <!-- Alterado para abaixo da logo -->
 
         <ImageView
             android:id="@+id/logo"

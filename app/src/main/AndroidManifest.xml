@@ -28,9 +28,24 @@
             android:name=".view.activities.LoginActivity"
             android:exported="true" />
 
-        <!-- Declaração da RegisterActivity -->
+        <!-- Declaração da RegistrationActivity -->
         <activity
             android:name=".view.activities.RegistrationActivity"
+            android:exported="true" />
+
+        <!-- Declaração da ProfileActivity -->
+        <activity
+            android:name=".view.activities.ProfileActivity"
+            android:exported="true" />
+
+        <!-- Declaração da UserListActivity -->
+        <activity
+            android:name=".view.activities.UserListActivity"
+            android:exported="true" />
+
+        <!-- Declaração da ForumActivity -->
+        <activity
+            android:name=".view.activities.ForumActivity"
             android:exported="true" />
 
     </application>
