@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552012653499",
+    "project_id": "lingolifee",
+    "storage_bucket": "lingolifee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552012653499:android:654f9bfe092f5d90239a9e",
+        "android_client_info": {
+          "package_name": "com.example.lingolife"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-hy8pMyf4XoQ4ixLEO3WM4VeGOmoMHkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
