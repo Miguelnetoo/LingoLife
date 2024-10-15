@@ -87,7 +87,6 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
-        // Ação do botão de adicionar foto de perfil
         btnProfilePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
