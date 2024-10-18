@@ -39,7 +39,7 @@
         android:layout_width="163dp"
         android:layout_height="75dp"
         android:backgroundTint="@color/roxoescuro"
-        android:text="Publicar Material"
+        android:text="Publicar Materiall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.763"
         app:layout_constraintStart_toStartOf="parent"
