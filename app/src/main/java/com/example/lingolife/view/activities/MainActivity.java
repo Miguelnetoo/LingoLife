@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
     private float dX, dY;
     private int lastAction;
-    private ImageView additionalImage1, additionalImage2; // Referências para imagens
+    private ImageView additionalImage1, image; // Referências para imagens
     private ImageView optionEnglish, optionSpanish, optionFrench; // Referências para idiomas
     private TextView optionWork, optionTravel, optionFun; // Referências para opções de trabalho, viagem e diversão
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnRegister = findViewById(R.id.btnRegister);
         ImageView bannerImage = findViewById(R.id.banner_image); // Referência ao ImageView que será móvel
         additionalImage1 = findViewById(R.id.additional_image1); // Referência ao additional_image1
-        additionalImage2 = findViewById(R.id.additional_image2); // Referência ao additional_image2
+        image = findViewById(R.id.image); // Referência ao image
 
         // Referência para os ImageViews de idiomas
         optionEnglish = findViewById(R.id.option_english);
@@ -88,9 +88,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Ação da ImageView additional_image2 - Redireciona para a ForumActivity
-        additionalImage2.setOnClickListener(v -> {
+        image.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ForumActivity.class);
             startActivity(intent);
+
         });
 
         // Defina a ação de clique para os ImageViews de idiomas

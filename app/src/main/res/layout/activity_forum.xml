@@ -1,57 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/azulsite"
     android:padding="16dp">
 
-    <!-- Título do Fórum -->
-    <TextView
-        android:id="@+id/forum_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fórum de Discussão"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="101dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo1"
+        app:layout_constraintEnd_toStartOf="@+id/post_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logouser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:contentDescription="Logo Pequena"
+        android:src="@drawable/photouser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/post_button"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center" />
+        tools:ignore="MissingConstraints" />
 
-    <!-- Campo de Entrada para Nova Postagem -->
-    <EditText
-        android:id="@+id/new_post_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Escreva sua mensagem..."
-        android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/forum_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
 
-    <!-- Botão para Enviar Postagem -->
     <Button
         android:id="@+id/post_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Postar"
+        android:layout_width="163dp"
+        android:layout_height="75dp"
         android:backgroundTint="@color/roxoescuro"
-        app:layout_constraintTop_toBottomOf="@id/new_post_input"
+        android:text="Publicar Material"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Lista de Postagens -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/forum_recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/post_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.763"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/smalltitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Você está acessando o"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        android:scrollbars="vertical" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/bigltitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Espaço de compartilhamento"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smalltitle" />
+
+    <TextView
+        android:id="@+id/smalltitle2"
+        android:layout_width="298dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Aqui você pode acessar materiais publicados por outros usuários ou publicar os seus"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bigltitle" />
+
+
+    <ImageView
+        android:id="@+id/photologouser"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Logo Pequena"
+        android:src="@drawable/photouser"
+        app:layout_constraintEnd_toStartOf="@+id/Nameuser"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smalltitle2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Nameuser"
+        android:layout_width="147dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:gravity="left"
+        android:text="Ana Beatriz"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.603"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smalltitle2" />
+
+    <TextView
+        android:id="@+id/visitperfil"
+        android:layout_width="126dp"
+        android:layout_height="20dp"
+        android:gravity="left"
+        android:text="Visite esse perfil"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nameuser" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_section"
+        android:layout_width="306dp"
+        android:layout_height="253dp"
+        android:background="@color/cinza"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photologouser"
+        app:layout_constraintVertical_bias="0.551">
+
+
+        <ImageView
+            android:id="@+id/choiceidioma"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:contentDescription="Logo Pequena"
+            android:src="@drawable/ingles"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textforum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Dicas de ingles"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choiceidioma" />
+
+        <TextView
+            android:id="@+id/textforum1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:text="Em inglês, cuidado com 'dessert' (sobremesa) e 'desert' (deserto)! A ênfase muda completamente."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textforum" />
+
+        <Button
+            android:id="@+id/avaliar"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/roxoescuro"
+            android:text="Avaliar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textforum1"
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/roxoescuro"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <!-- Logo pequena do lado esquerdo -->
+        <ImageView
+            android:id="@+id/footer_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="start"
+            android:contentDescription="Logo Pequena"
+            android:src="@drawable/logo1" />
+
+        <!-- Texto do lado direito -->
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="LingoLife © Copyright 2024. All Rights Reserved."
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
