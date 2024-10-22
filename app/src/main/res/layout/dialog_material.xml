@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_section"
+        android:layout_width="338dp"
+        android:layout_height="295dp"
+        android:background="@color/cinza"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="204dp">
+
+        <EditText
+            android:id="@+id/material_title"
+            android:layout_width="309dp"
+            android:layout_height="48dp"
+            android:hint="Título do Material"
+            app:layout_constraintBottom_toTopOf="@+id/material_link"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/material_description"
+            android:layout_width="311dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="212dp"
+            android:hint="Descrição do Material"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/material_link"
+            android:layout_width="308dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="96dp"
+            android:hint="Link para o Material"
+            app:layout_constraintBottom_toTopOf="@+id/material_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/titledialog"
+            android:layout_width="300dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:text="Escreva aqui suas dicas ou faça um resumo sobre o material anexado (Máx. 300 Caracteres):"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/material_link" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

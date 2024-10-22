@@ -36,20 +36,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcome_section"
-        android:layout_width="329dp"
-        android:layout_height="414dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="321dp"
+        android:layout_height="492dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/white"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
 
-        <!-- Campo Nome -->
-
-        <!-- Campo Nível do Idioma -->
-
-        <!-- Campo E-mail -->
 
         <ImageButton
             android:id="@+id/btnProfilePhoto"
@@ -57,7 +53,7 @@
             android:layout_height="100dp"
             android:background="@null"
             android:contentDescription="Selecione uma Foto"
-            android:src="@drawable/addfoto"
+            android:src="@drawable/perfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.453"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +99,7 @@
             android:id="@+id/edtEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="72dp"
             android:hint="E-mail"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
@@ -119,7 +115,7 @@
             android:id="@+id/edtPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:hint="Senha"
             android:inputType="textPassword"
             android:minHeight="48dp"
@@ -129,6 +125,19 @@
             app:layout_constraintTop_toBottomOf="@+id/edtEmail"
             app:layout_constraintWidth_percent="1"
             tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/sobremim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Sobremim"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="236dp" />
 
         <Button
             android:id="@+id/btnLogin"

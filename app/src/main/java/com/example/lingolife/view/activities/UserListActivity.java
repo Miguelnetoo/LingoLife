@@ -1,6 +1,10 @@
 package com.example.lingolife.view.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,10 +30,37 @@ public class UserListActivity extends AppCompatActivity {
         userList.add("Usuário 2");
         userList.add("Usuário 3");
 
-        // Configura o RecyclerView
-        recyclerView = findViewById(R.id.recycler_view_users);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        // Botões para visitar perfil
+        Button visitar1 = findViewById(R.id.visitar1);
+        Button visitar2 = findViewById(R.id.visitar2);
+        Button visitar3 = findViewById(R.id.visitar3);
 
+        visitar1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserListActivity.this, UserProfileActivity.class);
+                intent.putExtra("profileName", "Ana Pereira"); // Passe informações específicas se necessário
+                startActivity(intent);
+            }
+        });
+
+        visitar2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserListActivity.this, UserProfileActivity.class);
+                intent.putExtra("profileName", "Maria Silva");
+                startActivity(intent);
+            }
+        });
+
+        visitar3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserListActivity.this, UserProfileActivity.class);
+                intent.putExtra("profileName", "José Lucas");
+                startActivity(intent);
+            }
+        });
     }
 }
 

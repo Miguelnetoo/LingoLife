@@ -97,7 +97,7 @@
         android:layout_gravity="start"
         android:layout_marginTop="28dp"
         android:contentDescription="Logo Pequena"
-        android:src="@drawable/photouser"
+        android:src="@drawable/perfil"
         app:layout_constraintEnd_toStartOf="@+id/Nameuser"
         app:layout_constraintHorizontal_bias="0.645"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +110,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="44dp"
         android:gravity="left"
-        android:text="Ana Beatriz"
+        android:text="José lucas"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -144,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photologouser"
-        app:layout_constraintVertical_bias="0.551">
+        app:layout_constraintVertical_bias="0.307">
 
 
         <ImageView
