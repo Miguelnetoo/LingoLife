@@ -60,7 +60,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:background="@null"
-            android:contentDescription="Selecione uma Foto"
+            android:contentDescription="Selecione uma Fotoo"
             android:src="@drawable/perfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.053"
