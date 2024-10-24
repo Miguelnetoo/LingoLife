@@ -4,10 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lingolife.R;
 
@@ -16,7 +15,6 @@ import java.util.List;
 
 public class UserListActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
     private List<String> userList;
 
     @Override
@@ -34,6 +32,9 @@ public class UserListActivity extends AppCompatActivity {
         Button visitar1 = findViewById(R.id.visitar1);
         Button visitar2 = findViewById(R.id.visitar2);
         Button visitar3 = findViewById(R.id.visitar3);
+        ImageView logoUser = findViewById(R.id.logouser);
+
+
 
         visitar1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,16 @@ public class UserListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        logoUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserListActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
-

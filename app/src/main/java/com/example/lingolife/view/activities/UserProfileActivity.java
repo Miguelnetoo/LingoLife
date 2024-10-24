@@ -1,6 +1,8 @@
 package com.example.lingolife.view.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,5 +25,18 @@ public class UserProfileActivity extends AppCompatActivity {
         } else {
             nameTextView.setText("Usuário desconhecido");
         }
+
+        // Configura o botão "Enviar Mensagem"
+        Button sendMessageButton = findViewById(R.id.btn_send_message);
+        sendMessageButton.setOnClickListener(v -> {
+            // Inicia a atividade de chat e passa o nome do perfil
+            openChatActivity(profileName);
+        });
+    }
+
+    private void openChatActivity(String profileName) {
+        Intent intent = new Intent(UserProfileActivity.this, ChatActivity.class);
+        intent.putExtra("profileName", profileName); // Passa o nome do usuário para a atividade de chat
+        startActivity(intent);
     }
 }
